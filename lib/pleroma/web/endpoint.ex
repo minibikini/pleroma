@@ -6,6 +6,7 @@ defmodule Pleroma.Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :pleroma
 
   socket("/socket", Pleroma.Web.UserSocket)
+  socket("/live_super_admin", Phoenix.LiveView.Socket)
 
   plug(Pleroma.Plugs.SetLocalePlug)
   plug(CORSPlug)
@@ -49,6 +50,14 @@ defmodule Pleroma.Web.Endpoint do
   plug(Plug.Static,
     at: "/pleroma/admin/",
     from: {:pleroma, "priv/static/adminfe/"}
+  )
+
+  plug(Plug.Static,
+    # at: Application.get_env(:super_admin, :base_path, "/admin/"),
+    at: "/pleroma/adm/",
+    from: :super_admin,
+    gzip: false,
+    only: ~w(css fonts images js favicon.ico robots.txt)
   )
 
   # Code reloading can be explicitly enabled under the

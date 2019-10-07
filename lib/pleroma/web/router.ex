@@ -128,6 +128,12 @@ defmodule Pleroma.Web.Router do
     post("/uploader_callback/:upload_path", UploaderController, :callback)
   end
 
+  scope "/pleroma/adm" do
+    pipe_through([:browser])
+
+    forward("/", SuperAdminWeb.Router)
+  end
+
   scope "/api/pleroma/admin", Pleroma.Web.AdminAPI do
     pipe_through(:admin_api)
 

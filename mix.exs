@@ -94,7 +94,7 @@ defmodule Pleroma.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.4.8"},
+      {:phoenix, "~> 1.4.10"},
       {:tzdata, "~> 0.5.21"},
       {:plug_cowboy, "~> 2.0"},
       {:phoenix_pubsub, "~> 1.1"},
@@ -109,7 +109,7 @@ defmodule Pleroma.Mixfile do
       {:trailing_format_plug, "~> 0.0.7"},
       {:html_sanitize_ex, "~> 1.3.0"},
       {:html_entities, "~> 0.4"},
-      {:phoenix_html, "~> 2.10"},
+      {:phoenix_html, "~> 2.13", override: true},
       {:calendar, "~> 0.17.4"},
       {:cachex, "~> 3.0.2"},
       {:poison, "~> 3.0", override: true},
@@ -159,6 +159,7 @@ defmodule Pleroma.Mixfile do
       {:plug_static_index_html, "~> 1.0.0"},
       {:excoveralls, "~> 0.11.1", only: :test},
       {:flake_id, "~> 0.1.0"},
+      {:super_admin, path: "../../super_admin"},
       {:remote_ip,
        git: "https://git.pleroma.social/pleroma/remote_ip.git",
        ref: "825dc00aaba5a1b7c4202a532b696b595dd3bcb3"},

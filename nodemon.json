@@ -1,0 +1,6 @@
+{
+  "verbose": true,
+  "watch": ["../../super_admin/lib/", "../../phx_component/lib/", "config/"],
+  "ext": "ex,exs,eex,leex",
+  "exec": "mix phx.server"
+}
