@@ -168,9 +168,13 @@ defmodule Pleroma.Object.Fetcher do
 
     Logger.debug("Fetch headers: #{inspect(headers)}")
 
+    IO.inspect("Fetching object #{id} via AP")
+    IO.inspect(HTTP.get(id, headers))
+
     with {:scheme, true} <- {:scheme, String.starts_with?(id, "http")},
          {:ok, %{body: body, status: code}} when code in 200..299 <- HTTP.get(id, headers),
          {:ok, data} <- Jason.decode(body),
+         IO.inspect(Containment.contain_origin_from_id(id, data)),
          :ok <- Containment.contain_origin_from_id(id, data) do
       {:ok, data}
     else
