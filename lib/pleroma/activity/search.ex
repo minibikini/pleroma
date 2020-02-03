@@ -87,6 +87,8 @@ defmodule Pleroma.Activity.Search do
   defp restrict_local(q), do: where(q, local: true)
 
   defp maybe_fetch(activities, user, search_query) do
+    IO.inspect("FETCHING #{search_query} ")
+
     with true <- Regex.match?(~r/https?:/, search_query),
          {:ok, object} <- Fetcher.fetch_object_from_id(search_query),
          %Activity{} = activity <- Activity.get_create_by_object_ap_id(object.data["id"]),
