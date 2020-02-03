@@ -88,6 +88,8 @@ defmodule Pleroma.Activity.Search do
 
   defp maybe_fetch(activities, user, search_query) do
     IO.inspect("FETCHING #{search_query} ")
+    IO.inspect(true <- Regex.match?(~r/https?:/, search_query))
+    IO.inspect(Fetcher.fetch_object_from_id(search_query))
 
     with true <- Regex.match?(~r/https?:/, search_query),
          {:ok, object} <- Fetcher.fetch_object_from_id(search_query),
