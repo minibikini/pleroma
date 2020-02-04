@@ -170,6 +170,7 @@ defmodule Pleroma.Object.Fetcher do
 
     IO.inspect("Fetching object #{id} via AP")
     IO.inspect(HTTP.get(id, headers))
+    IO.inspect("----")
 
     with {:scheme, true} <- {:scheme, String.starts_with?(id, "http")},
          {:ok, %{body: body, status: code}} when code in 200..299 <- HTTP.get(id, headers),
