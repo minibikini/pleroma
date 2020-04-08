@@ -180,7 +180,9 @@ defmodule Pleroma.Mixfile do
        ref: "e0f16822d578866e186a0974d65ad58cddc1e2ab"},
       {:mox, "~> 0.5", only: :test},
       {:restarter, path: "./restarter"},
-      {:open_api_spex, "~> 3.6"}
+      {:open_api_spex,
+       git: "https://github.com/minibikini/open_api_spex.git",
+       ref: "873ad25a557ae4d1dbc54a31a8575673233f24d1"}
     ] ++ oauth_deps()
   end
 
