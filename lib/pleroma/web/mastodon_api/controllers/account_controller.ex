@@ -86,7 +86,8 @@ defmodule Pleroma.Web.MastodonAPI.AccountController do
            :statuses,
            :followers,
            :following,
-           :lists
+           :lists,
+           :follow
          ]
   )
 
@@ -327,8 +328,8 @@ defmodule Pleroma.Web.MastodonAPI.AccountController do
     {:error, :not_found}
   end
 
-  def follow(%{assigns: %{user: follower, account: followed}} = conn, _params) do
-    with {:ok, follower} <- MastodonAPI.follow(follower, followed, conn.params) do
+  def follow(%{assigns: %{user: follower, account: followed}} = conn, params) do
+    with {:ok, follower} <- MastodonAPI.follow(follower, followed, params) do
       render(conn, "relationship.json", user: follower, target: followed)
     else
       {:error, message} -> json_response(conn, :forbidden, %{error: message})
