@@ -87,7 +87,8 @@ defmodule Pleroma.Web.MastodonAPI.AccountController do
            :followers,
            :following,
            :lists,
-           :follow
+           :follow,
+           :unfollow
          ]
   )
 
