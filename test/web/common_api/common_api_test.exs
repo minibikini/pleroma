@@ -1241,4 +1241,94 @@ defmodule Pleroma.Web.CommonAPITest do
              } = CommonAPI.get_user("")
     end
   end
+
+  describe "with `local_only` enabled" do
+    test "delete" do
+      user = insert(:user)
+
+      {:ok, %Activity{id: activity_id}} =
+        CommonAPI.post(user, %{status: "#2hu #2HU", local_only: true})
+
+      assert {:ok, %Activity{data: %{"deleted_activity_id" => ^activity_id}} = activity} =
+               CommonAPI.delete(activity_id, user)
+
+      assert Activity.local_only?(activity)
+    end
+
+    test "repeat" do
+      user = insert(:user)
+      other_user = insert(:user)
+
+      {:ok, %Activity{id: activity_id}} =
+        CommonAPI.post(other_user, %{status: "cofe", local_only: true})
+
+      assert {:ok, %Activity{data: %{"type" => "Announce"}} = activity} =
+               CommonAPI.repeat(activity_id, user)
+
+      assert Activity.local_only?(activity)
+    end
+
+    test "unrepeat" do
+      user = insert(:user)
+      other_user = insert(:user)
+
+      {:ok, %Activity{id: activity_id}} =
+        CommonAPI.post(other_user, %{status: "cofe", local_only: true})
+
+      assert {:ok, _} = CommonAPI.repeat(activity_id, user)
+
+      assert {:ok, %Activity{data: %{"type" => "Undo"}} = activity} =
+               CommonAPI.unrepeat(activity_id, user)
+
+      assert Activity.local_only?(activity)
+    end
+
+    test "favorite" do
+      user = insert(:user)
+      other_user = insert(:user)
+
+      {:ok, activity} = CommonAPI.post(other_user, %{status: "cofe", local_only: true})
+
+      assert {:ok, %Activity{data: %{"type" => "Like"}} = activity} =
+               CommonAPI.favorite(user, activity.id)
+
+      assert Activity.local_only?(activity)
+    end
+
+    test "unfavorite" do
+      user = insert(:user)
+      other_user = insert(:user)
+
+      {:ok, activity} = CommonAPI.post(other_user, %{status: "cofe", local_only: true})
+
+      {:ok, %Activity{}} = CommonAPI.favorite(user, activity.id)
+
+      assert {:ok, activity} = CommonAPI.unfavorite(activity.id, user)
+      assert Activity.local_only?(activity)
+    end
+
+    test "react_with_emoji" do
+      user = insert(:user)
+      other_user = insert(:user)
+      {:ok, activity} = CommonAPI.post(other_user, %{status: "cofe", local_only: true})
+
+      assert {:ok, %Activity{data: %{"type" => "EmojiReact"}} = activity} =
+               CommonAPI.react_with_emoji(activity.id, user, "👍")
+
+      assert Activity.local_only?(activity)
+    end
+
+    test "unreact_with_emoji" do
+      user = insert(:user)
+      other_user = insert(:user)
+      {:ok, activity} = CommonAPI.post(other_user, %{status: "cofe", local_only: true})
+
+      {:ok, _reaction} = CommonAPI.react_with_emoji(activity.id, user, "👍")
+
+      assert {:ok, %Activity{data: %{"type" => "Undo"}} = activity} =
+               CommonAPI.unreact_with_emoji(activity.id, user, "👍")
+
+      assert Activity.local_only?(activity)
+    end
+  end
 end
