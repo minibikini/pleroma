@@ -301,7 +301,7 @@ defmodule Pleroma.Web.ActivityPub.PublisherTest do
              )
     end
 
-    test_with_mock "publishes a delete activity to peers who signed fetch requests to the create acitvity/object.",
+    test_with_mock "publishes a delete activity to peers who signed fetch requests to the create activity/object.",
                    Pleroma.Web.Federator.Publisher,
                    [:passthrough],
                    [] do

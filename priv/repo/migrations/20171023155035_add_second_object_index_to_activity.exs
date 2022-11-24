@@ -1,4 +1,4 @@
-defmodule Pleroma.Repo.Migrations.AddSecondObjectIndexToActivty do
+defmodule Pleroma.Repo.Migrations.AddSecondObjectIndexToActivity do
   use Ecto.Migration
 
   @disable_ddl_transaction true

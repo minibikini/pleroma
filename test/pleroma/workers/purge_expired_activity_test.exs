@@ -46,7 +46,7 @@ defmodule Pleroma.Workers.PurgeExpiredActivityTest do
              perform_job(Pleroma.Workers.PurgeExpiredActivity, %{activity_id: activity.id})
   end
 
-  test "error if actiivity was not found" do
+  test "error if activity was not found" do
     assert {:ok, _} =
              PurgeExpiredActivity.enqueue(%{
                activity_id: "some_id",
