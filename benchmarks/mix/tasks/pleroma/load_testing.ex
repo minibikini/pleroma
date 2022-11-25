@@ -11,7 +11,7 @@ defmodule Mix.Tasks.Pleroma.LoadTesting do
   Generates data like:
   - local/remote users
   - local/remote activities with differrent visibility:
-    - simple activiities
+    - simple activities
     - with emoji
     - with mentions
     - hellthreads
