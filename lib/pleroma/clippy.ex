@@ -91,7 +91,7 @@ defmodule Pleroma.Clippy do
       noclippy_line: noclippy_line
     }
 
-    # surrond one/five line clippy with blank lines around to not fuck up the layout
+    # surround one/five line clippy with blank lines around to not fuck up the layout
     #
     # yes this fix sucks but it's good enough, have you ever seen a release of windows
     # without some butchered features anyway?
