@@ -929,7 +929,7 @@ defmodule Pleroma.UserTest do
       assert cs.valid?
     end
 
-    test "it sets the follower_adress" do
+    test "it sets the follower_address" do
       cs = User.remote_user_changeset(@valid_remote)
       # remote users get a fake local follower address
       assert cs.changes.follower_address ==

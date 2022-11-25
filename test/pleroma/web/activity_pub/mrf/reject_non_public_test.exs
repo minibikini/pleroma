@@ -39,7 +39,7 @@ defmodule Pleroma.Web.ActivityPub.MRF.RejectNonPublicTest do
   end
 
   describe "followers message" do
-    test "it's allowed when addrer of message in the follower addresses of user and it enabled in config" do
+    test "it's allowed when address of message in the follower addresses of user and it enabled in config" do
       actor = insert(:user, follower_address: "test-address")
 
       message = %{
@@ -53,7 +53,7 @@ defmodule Pleroma.Web.ActivityPub.MRF.RejectNonPublicTest do
       assert {:ok, _message} = RejectNonPublic.filter(message)
     end
 
-    test "it's rejected when addrer of message in the follower addresses of user and it disabled in config" do
+    test "it's rejected when address of message in the follower addresses of user and it disabled in config" do
       actor = insert(:user, follower_address: "test-address")
 
       message = %{

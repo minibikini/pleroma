@@ -118,7 +118,7 @@ defmodule Pleroma.Web.ActivityPub.UtilsTest do
       assert Enum.sort(cc) == expected_cc
     end
 
-    test "does not adress actor's follower address if the activity is not public", %{
+    test "does not address actor's follower address if the activity is not public", %{
       user: user,
       other_user: other_user,
       third_user: third_user
