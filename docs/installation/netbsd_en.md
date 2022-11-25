@@ -141,7 +141,7 @@ running on port 80:
   }
 ```
 
-Replace the string after after `$1.` with your fingerprint.
+Replace the string after `$1.` with your fingerprint.
 
 Start nginx:
 
