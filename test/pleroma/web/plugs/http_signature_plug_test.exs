@@ -12,7 +12,7 @@ defmodule Pleroma.Web.Plugs.HTTPSignaturePlugTest do
 
   test "it call HTTPSignatures to check validity if the actor sighed it" do
     params = %{"actor" => "http://mastodon.example.org/users/admin"}
-    conn = build_conn(:get, "/doesntmattter", params)
+    conn = build_conn(:get, "/doesntmatter", params)
 
     with_mock HTTPSignatures, validate_conn: fn _ -> true end do
       conn =
@@ -35,7 +35,7 @@ defmodule Pleroma.Web.Plugs.HTTPSignaturePlugTest do
       clear_config([:activitypub, :authorized_fetch_mode], true)
 
       params = %{"actor" => "http://mastodon.example.org/users/admin"}
-      conn = build_conn(:get, "/doesntmattter", params) |> put_format("activity+json")
+      conn = build_conn(:get, "/doesntmatter", params) |> put_format("activity+json")
 
       [conn: conn]
     end

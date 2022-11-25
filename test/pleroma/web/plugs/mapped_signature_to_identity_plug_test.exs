@@ -22,7 +22,7 @@ defmodule Pleroma.Web.Plugs.MappedSignatureToIdentityPlugTest do
 
   test "it successfully maps a valid identity with a valid signature" do
     conn =
-      build_conn(:get, "/doesntmattter")
+      build_conn(:get, "/doesntmatter")
       |> set_signature("http://mastodon.example.org/users/admin")
       |> MappedSignatureToIdentityPlug.call(%{})
 
@@ -31,7 +31,7 @@ defmodule Pleroma.Web.Plugs.MappedSignatureToIdentityPlugTest do
 
   test "it successfully maps a valid identity with a valid signature with payload" do
     conn =
-      build_conn(:post, "/doesntmattter", %{"actor" => "http://mastodon.example.org/users/admin"})
+      build_conn(:post, "/doesntmatter", %{"actor" => "http://mastodon.example.org/users/admin"})
       |> set_signature("http://mastodon.example.org/users/admin")
       |> MappedSignatureToIdentityPlug.call(%{})
 
@@ -40,7 +40,7 @@ defmodule Pleroma.Web.Plugs.MappedSignatureToIdentityPlugTest do
 
   test "it considers a mapped identity to be invalid when it mismatches a payload" do
     conn =
-      build_conn(:post, "/doesntmattter", %{"actor" => "http://mastodon.example.org/users/admin"})
+      build_conn(:post, "/doesntmatter", %{"actor" => "http://mastodon.example.org/users/admin"})
       |> set_signature("https://niu.moe/users/rye")
       |> MappedSignatureToIdentityPlug.call(%{})
 
@@ -50,7 +50,7 @@ defmodule Pleroma.Web.Plugs.MappedSignatureToIdentityPlugTest do
   @tag skip: "known breakage; the testsuite presently depends on it"
   test "it considers a mapped identity to be invalid when the identity cannot be found" do
     conn =
-      build_conn(:post, "/doesntmattter", %{"actor" => "http://mastodon.example.org/users/admin"})
+      build_conn(:post, "/doesntmatter", %{"actor" => "http://mastodon.example.org/users/admin"})
       |> set_signature("http://niu.moe/users/rye")
       |> MappedSignatureToIdentityPlug.call(%{})
 
