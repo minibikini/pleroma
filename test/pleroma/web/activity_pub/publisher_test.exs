@@ -123,7 +123,7 @@ defmodule Pleroma.Web.ActivityPub.PublisherTest do
   end
 
   describe "publish_one/1" do
-    test "publish to url with with different ports" do
+    test "publish to url with different ports" do
       inbox80 = "http://42.site/users/nick1/inbox"
       inbox42 = "http://42.site:42/users/nick1/inbox"
 
