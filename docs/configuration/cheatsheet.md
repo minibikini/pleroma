@@ -808,7 +808,7 @@ config :quack,
   webhook_url: "https://hooks.slack.com/services/YOUR-API-KEY-HERE"
 ```
 
-See the [Quack Github](https://github.com/azohra/quack) for more details
+See the [Quack GitHub](https://github.com/azohra/quack) for more details
 
 
 
