@@ -249,7 +249,7 @@ amd64:
     paths:
       - release/*
     # Ideally it would be never for master branch and with the next commit for develop,
-    # but Gitlab does not support neither `only` for artifacts
+    # but GitLab does not support neither `only` for artifacts
     # nor setting it to never from .gitlab-ci.yml
     # nor expiring with the next commit
     expire_in: 42 yrs
