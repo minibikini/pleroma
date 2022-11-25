@@ -159,7 +159,7 @@ sleep 20 && curl http://localhost:4000/api/v1/instance
 su pleroma -s $SHELL -lc "./bin/pleroma stop"
 ```
 
-### Setting up nginx and getting Let's Encrypt SSL certificaties
+### Setting up nginx and getting Let's Encrypt SSL certificates
 
 #### Get a Let's Encrypt certificate
 ```sh
