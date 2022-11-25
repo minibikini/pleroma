@@ -768,7 +768,7 @@ switched to a new configuration mechanism, however it was not officially removed
 
 ## [1.1.5] - 2019-11-09
 ### Fixed
-- Polls having different numbers in timelines/notifications/poll api endpoints due to cache desyncronization
+- Polls having different numbers in timelines/notifications/poll api endpoints due to cache desynchronization
 - Pleroma API: OAuth token endpoint not being found when ".json" suffix is appended
 
 ### Changed
