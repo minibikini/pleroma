@@ -44,7 +44,7 @@ defmodule Pleroma.HTTP.AdapterHelper.GunTest do
       assert opts[:certificates_verification]
     end
 
-    test "merges with defaul http adapter config" do
+    test "merges with default http adapter config" do
       defaults = Gun.options([receive_conn: false], URI.parse("https://example.com"))
       assert Keyword.has_key?(defaults, :a)
       assert Keyword.has_key?(defaults, :b)
