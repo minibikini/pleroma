@@ -72,10 +72,10 @@ defmodule Pleroma.Web.ActivityPub.ObjectValidators.AnnounceValidator do
     |> validate_actor_presence()
     |> validate_object_presence()
     |> validate_existing_announce()
-    |> validate_announcable()
+    |> validate_announceable()
   end
 
-  defp validate_announcable(cng) do
+  defp validate_announceable(cng) do
     with actor when is_binary(actor) <- get_field(cng, :actor),
          object when is_binary(object) <- get_field(cng, :object),
          %User{} = actor <- User.get_cached_by_ap_id(actor),
