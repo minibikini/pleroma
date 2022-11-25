@@ -179,7 +179,7 @@ If that doesn’t work, make sure, that nginx is not already running. If it stil
 sudo cp /opt/pleroma/installation/pleroma.nginx /etc/nginx/conf.d/pleroma.conf
 ```
 
-* Before starting nginx edit the configuration and change it to your needs. You must change change `server_name` and the paths to the certificates. You can use `nano` (install with `apk add nano` if missing).
+* Before starting nginx edit the configuration and change it to your needs. You must change `server_name` and the paths to the certificates. You can use `nano` (install with `apk add nano` if missing).
 
 ```
 server {
