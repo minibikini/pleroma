@@ -849,7 +849,7 @@ curl -Lo ./bin/pleroma_ctl 'https://git.pleroma.social/pleroma/pleroma/raw/devel
 - Rich Media: Parser failing when no TTL can be found by image TTL setters
 - Rich Media: The crawled URL is now spliced into the rich media data.
 - ActivityPub S2S: sharedInbox usage has been mostly aligned with the rules in the AP specification.
-- ActivityPub C2S: follower/following collection pages being inaccessible even when authentifucated if `hide_followers`/ `hide_follows` was set
+- ActivityPub C2S: follower/following collection pages being inaccessible even when authenticated if `hide_followers`/ `hide_follows` was set
 - ActivityPub: Deactivated user deletion
 - ActivityPub: Fix `/users/:nickname/inbox` crashing without an authenticated user
 - MRF: fix ability to follow a relay when AntiFollowbotPolicy was enabled
