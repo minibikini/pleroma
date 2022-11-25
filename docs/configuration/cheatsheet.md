@@ -1101,7 +1101,7 @@ Control favicons for instances.
 !!! note
     Requires enabled email
 
-* `:purge_after_days` an integer, remove backup achives after N days.
+* `:purge_after_days` an integer, remove backup archives after N days.
 * `:limit_days` an integer, limit user to export not more often than once per N days.
 * `:dir` a string with a path to backup temporary directory or `nil` to let Pleroma choose temporary directory in the following order:
     1. the directory named by the TMPDIR environment variable
