@@ -47,7 +47,7 @@ defmodule Pleroma.Web.Auth.PleromaAuthenticatorTest do
     assert {:ok, user} == res
   end
 
-  test "error credintails" do
+  test "error credentials" do
     res = PleromaAuthenticator.get_user(%Plug.Conn{params: %{}})
     assert {:error, :invalid_credentials} == res
   end
