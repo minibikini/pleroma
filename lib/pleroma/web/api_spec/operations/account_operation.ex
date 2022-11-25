@@ -768,7 +768,7 @@ defmodule Pleroma.Web.ApiSpec.AccountOperation do
       items: List,
       example: [
         %{"id" => "123", "title" => "my list"},
-        %{"id" => "1337", "title" => "anotehr list"}
+        %{"id" => "1337", "title" => "another list"}
       ]
     }
   end
