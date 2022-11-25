@@ -77,7 +77,7 @@ Can be safely re-run
     mix pleroma.database update_users_following_followers_counts
     ```
 
-## Fix the pre-existing "likes" collections for all objects
+## Fix the preexisting "likes" collections for all objects
 
 === "OTP"
 
