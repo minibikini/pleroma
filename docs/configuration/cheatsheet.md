@@ -897,7 +897,7 @@ Authentication / authorization settings.
 
 ### :ldap
 
-Use LDAP for user authentication.  When a user logs in to the Pleroma
+Use LDAP for user authentication.  When a user logs into the Pleroma
 instance, the name and password will be verified by trying to authenticate
 (bind) to an LDAP server.  If a user exists in the LDAP directory but there
 is no account with the same name yet on the Pleroma instance then a new

@@ -156,4 +156,4 @@ If not, run:
 ```
 chmod -R 600 /var/lib/tor/pleroma_hidden_service/
 ```
-* If you have trouble logging in to the Mastodon Frontend when using Tor, use the Tor Browser Bundle.
+* If you have trouble logging into the Mastodon Frontend when using Tor, use the Tor Browser Bundle.

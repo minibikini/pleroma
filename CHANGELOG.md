@@ -696,7 +696,7 @@ switched to a new configuration mechanism, however it was not officially removed
 
 ### Fixed
 - Report emails now include functional links to profiles of remote user accounts
-- Not being able to log in to some third-party apps when logged in to MastoFE
+- Not being able to log into some third-party apps when logged into MastoFE
 - MRF: `Delete` activities being exempt from MRF policies
 - OTP releases: Not being able to configure OAuth expired token cleanup interval
 - OTP releases: Not being able to configure HTML sanitization policy
