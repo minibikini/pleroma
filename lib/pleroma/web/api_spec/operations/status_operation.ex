@@ -36,7 +36,7 @@ defmodule Pleroma.Web.ApiSpec.StatusOperation do
           :with_muted,
           :query,
           BooleanLike,
-          "Include reactions from muted acccounts."
+          "Include reactions from muted accounts."
         )
       ],
       operationId: "StatusController.index",
@@ -79,7 +79,7 @@ defmodule Pleroma.Web.ApiSpec.StatusOperation do
           :with_muted,
           :query,
           BooleanLike,
-          "Include reactions from muted acccounts."
+          "Include reactions from muted accounts."
         )
       ],
       responses: %{

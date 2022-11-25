@@ -29,7 +29,7 @@ defmodule Pleroma.Web.ApiSpec.EmojiReactionOperation do
           :with_muted,
           :query,
           :boolean,
-          "Include reactions from muted acccounts."
+          "Include reactions from muted accounts."
         )
       ],
       security: [%{"oAuth" => ["read:statuses"]}],
