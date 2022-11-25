@@ -137,7 +137,7 @@ The `/api/v1/pleroma/admin/*` path is backwards compatible with `/api/pleroma/ad
 
 ## `GET /api/v1/pleroma/admin/users/:nickname/permission_group`
 
-### Get user user permission groups membership
+### Get user permission groups membership
 
 - Params: none
 - Response:
@@ -153,7 +153,7 @@ The `/api/v1/pleroma/admin/*` path is backwards compatible with `/api/pleroma/ad
 
 Note: Available `:permission_group` is currently moderator and admin. 404 is returned when the permission group doesn’t exist.
 
-### Get user user permission groups membership per permission group
+### Get user permission groups membership per permission group
 
 - Params: none
 - Response:
