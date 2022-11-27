@@ -534,7 +534,7 @@ defmodule Pleroma.Web.ActivityPub.UtilsTest do
   end
 
   describe "get_cached_emoji_reactions/1" do
-    test "returns the data or an emtpy list" do
+    test "returns the data or an empty list" do
       object = insert(:note)
       assert Utils.get_cached_emoji_reactions(object) == []
 
