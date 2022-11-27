@@ -61,7 +61,7 @@ defmodule Pleroma.Web.Push.Subscription do
     })
   end
 
-  @doc "Gets subsciption by user & token"
+  @doc "Gets subscription by user & token"
   @spec get(User.t(), Token.t()) :: {:ok, t()} | {:error, :not_found}
   def get(%User{id: user_id}, %Token{id: token_id}) do
     case Repo.get_by(Subscription, user_id: user_id, token_id: token_id) do

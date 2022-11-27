@@ -149,7 +149,7 @@ defmodule Pleroma.Web.MastodonAPI.SubscriptionControllerTest do
       assert %{"error" => "Record not found"} == res
     end
 
-    test "returns a user subsciption", %{conn: conn, user: user, token: token} do
+    test "returns a user subscription", %{conn: conn, user: user, token: token} do
       subscription =
         insert(:push_subscription,
           user: user,
@@ -173,7 +173,7 @@ defmodule Pleroma.Web.MastodonAPI.SubscriptionControllerTest do
     end
   end
 
-  describe "updates a user subsciption" do
+  describe "updates a user subscription" do
     setup %{conn: conn, user: user, token: token} do
       subscription =
         insert(:push_subscription,
@@ -194,7 +194,7 @@ defmodule Pleroma.Web.MastodonAPI.SubscriptionControllerTest do
       %{conn: conn, user: user, token: token, subscription: subscription}
     end
 
-    test "returns updated subsciption", %{conn: conn, subscription: subscription} do
+    test "returns updated subscription", %{conn: conn, subscription: subscription} do
       res =
         conn
         |> put("/api/v1/push/subscription", %{
@@ -239,7 +239,7 @@ defmodule Pleroma.Web.MastodonAPI.SubscriptionControllerTest do
       assert %{"error" => "Record not found"} == res
     end
 
-    test "returns empty result and delete user subsciption", %{
+    test "returns empty result and delete user subscription", %{
       conn: conn,
       user: user,
       token: token
