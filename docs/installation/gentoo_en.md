@@ -21,7 +21,7 @@ Double check your compiler flags in `/etc/portage/make.conf`. If you require any
 
 ### Installing a cron daemon
 
-Gentoo quite pointedly does not come with a cron daemon installed, and as such it is recommended you install one to automate certbot renewals and to allow other system administration tasks to be run automatically. Gentoo has [a whole wide world of cron options](https://wiki.gentoo.org/wiki/Cron) but if you just want A Cron That Works, `emerge --ask virtual/cron` will install the default cron implementation (probably cronie) which will work just fine. For the purpouses of this guide, we will be doing just that.
+Gentoo quite pointedly does not come with a cron daemon installed, and as such it is recommended you install one to automate certbot renewals and to allow other system administration tasks to be run automatically. Gentoo has [a whole wide world of cron options](https://wiki.gentoo.org/wiki/Cron) but if you just want A Cron That Works, `emerge --ask virtual/cron` will install the default cron implementation (probably cronie) which will work just fine. For the purposes of this guide, we will be doing just that.
 
 ### Required ebuilds
 
@@ -60,7 +60,7 @@ If you're running this from a low-powered virtual machine, it should work though
 
 ### Install PostgreSQL
 
-[Gentoo  Wiki article](https://wiki.gentoo.org/wiki/PostgreSQL) as well as [PostgreSQL QuickStart](https://wiki.gentoo.org/wiki/PostgreSQL/QuickStart) might be worth a quick glance, as the way Gentoo handles postgres is slightly unusual, with built in capability to have two different databases running for testing and live or whatever other purpouse. While it is still straightforward to install, it does mean that the version numbers used in this guide might change for future updates, so keep an eye out for the output you get from `emerge` to ensure you are using the correct ones.
+[Gentoo  Wiki article](https://wiki.gentoo.org/wiki/PostgreSQL) as well as [PostgreSQL QuickStart](https://wiki.gentoo.org/wiki/PostgreSQL/QuickStart) might be worth a quick glance, as the way Gentoo handles postgres is slightly unusual, with built in capability to have two different databases running for testing and live or whatever other purpose. While it is still straightforward to install, it does mean that the version numbers used in this guide might change for future updates, so keep an eye out for the output you get from `emerge` to ensure you are using the correct ones.
 
 * Install postgresql if you have not done so already:
 
