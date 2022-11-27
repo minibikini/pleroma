@@ -124,7 +124,7 @@ The `/api/v1/pleroma/*` path is backwards compatible with `/api/pleroma/*` (`/ap
 * Example response: `{"error": "Invalid password."}`
 
 ## `/api/v1/pleroma/accounts/mfa/backup_codes`
-####  Generstes backup codes MFA for user account.
+####  Generates backup codes MFA for user account.
 * method: `GET`
 * Authentication: required
 * OAuth scope: `write:security`
