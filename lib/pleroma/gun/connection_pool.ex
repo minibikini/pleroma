@@ -28,7 +28,7 @@ defmodule Pleroma.Gun.ConnectionPool do
         {:ok, gun_pid}
 
       [] ->
-        # :gun.set_owner fails in :connected state for whatevever reason,
+        # :gun.set_owner fails in :connected state for whatever reason,
         # so we open the connection in the process directly and send it's pid back
         # We trust gun to handle timeouts by itself
         case WorkerSupervisor.start_worker([key, uri, opts, self()]) do
