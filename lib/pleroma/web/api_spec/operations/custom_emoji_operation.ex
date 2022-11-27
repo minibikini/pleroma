@@ -19,12 +19,12 @@ defmodule Pleroma.Web.ApiSpec.CustomEmojiOperation do
       description: "Returns custom emojis that are available on the server.",
       operationId: "CustomEmojiController.index",
       responses: %{
-        200 => Operation.response("Custom Emojis", "application/json", resposnse())
+        200 => Operation.response("Custom Emojis", "application/json", response())
       }
     }
   end
 
-  defp resposnse do
+  defp response do
     %Schema{
       title: "CustomEmojisResponse",
       description: "Response schema for custom emojis",

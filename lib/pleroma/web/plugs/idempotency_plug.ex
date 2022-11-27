@@ -29,7 +29,7 @@ defmodule Pleroma.Web.Plugs.IdempotencyPlug do
   def process_request(conn, key) do
     case @cachex.get(:idempotency_cache, key) do
       {:ok, nil} ->
-        cache_resposnse(conn, key)
+        cache_response(conn, key)
 
       {:ok, record} ->
         send_cached(conn, key, record)
@@ -39,7 +39,7 @@ defmodule Pleroma.Web.Plugs.IdempotencyPlug do
     end
   end
 
-  defp cache_resposnse(conn, key) do
+  defp cache_response(conn, key) do
     register_before_send(conn, fn conn ->
       [request_id] = get_resp_header(conn, "x-request-id")
       content_type = get_content_type(conn)
