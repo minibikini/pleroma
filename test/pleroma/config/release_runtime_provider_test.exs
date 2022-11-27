@@ -4,7 +4,7 @@ defmodule Pleroma.Config.ReleaseRuntimeProviderTest do
   alias Pleroma.Config.ReleaseRuntimeProvider
 
   describe "load/2" do
-    test "loads release defaults config and warns about non-existent runtime config" do
+    test "loads release defaults config and warns about nonexistent runtime config" do
       ExUnit.CaptureIO.capture_io(fn ->
         merged = ReleaseRuntimeProvider.load([], [])
         assert merged == Pleroma.Config.Holder.release_defaults()

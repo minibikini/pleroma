@@ -151,7 +151,7 @@ defmodule Pleroma.Web.PleromaAPI.EmojiPackControllerTest do
       assert Enum.find(arch, fn {n, _} -> n == 'blank.png' end)
     end
 
-    test "non existing pack", %{conn: conn} do
+    test "nonexistent pack", %{conn: conn} do
       assert conn
              |> get("/api/pleroma/emoji/packs/archive?name=test_pack_for_import")
              |> json_response_and_validate_schema(:not_found) == %{
@@ -639,7 +639,7 @@ defmodule Pleroma.Web.PleromaAPI.EmojiPackControllerTest do
                |> json_response_and_validate_schema(200)
     end
 
-    test "non existing pack", %{conn: conn} do
+    test "nonexistent pack", %{conn: conn} do
       assert conn
              |> get("/api/pleroma/emoji/pack?name=non_existing")
              |> json_response_and_validate_schema(:not_found) == %{

@@ -28,9 +28,9 @@ defmodule Pleroma.OTPVersionTest do
                "23.0"
     end
 
-    test "with non existance file" do
+    test "with nonexistent file" do
       assert OTPVersion.get_version_from_files([
-               "test/fixtures/warnings/otp_version/non-exising",
+               "test/fixtures/warnings/otp_version/nonexistent",
                "test/fixtures/warnings/otp_version/22.4"
              ]) == "22.4"
     end

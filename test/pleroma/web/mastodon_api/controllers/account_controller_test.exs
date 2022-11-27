@@ -947,11 +947,11 @@ defmodule Pleroma.Web.MastodonAPI.AccountControllerTest do
                |> post("/api/v1/follows", %{"uri" => user.nickname})
                |> json_response_and_validate_schema(400)
 
-      # follow non existing user
+      # follow nonexistent user
       conn_res = post(conn, "/api/v1/accounts/doesntexist/follow")
       assert %{"error" => "Record not found"} = json_response_and_validate_schema(conn_res, 404)
 
-      # follow non existing user via uri
+      # follow nonexistent user via uri
       conn_res =
         conn
         |> put_req_header("content-type", "multipart/form-data")
@@ -959,7 +959,7 @@ defmodule Pleroma.Web.MastodonAPI.AccountControllerTest do
 
       assert %{"error" => "Record not found"} = json_response_and_validate_schema(conn_res, 404)
 
-      # unfollow non existing user
+      # unfollow nonexistent user
       conn_res = post(conn, "/api/v1/accounts/doesntexist/unfollow")
       assert %{"error" => "Record not found"} = json_response_and_validate_schema(conn_res, 404)
     end

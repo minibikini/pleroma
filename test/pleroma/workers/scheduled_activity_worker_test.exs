@@ -44,7 +44,7 @@ defmodule Pleroma.Workers.ScheduledActivityWorkerTest do
     assert object.data["content"] == "hi"
   end
 
-  test "error message for non-existent scheduled activity" do
+  test "error message for nonexistent scheduled activity" do
     assert capture_log([level: :error], fn ->
              ScheduledActivityWorker.perform(%Oban.Job{args: %{"activity_id" => 42}})
            end) =~ "Couldn't find scheduled activity: 42"

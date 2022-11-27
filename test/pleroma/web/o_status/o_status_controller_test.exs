@@ -90,7 +90,7 @@ defmodule Pleroma.Web.OStatus.OStatusControllerTest do
       |> response(404)
     end
 
-    test "404s on non-existing objects", %{conn: conn} do
+    test "404s on nonexistent objects", %{conn: conn} do
       conn
       |> get("/objects/123")
       |> response(404)
@@ -210,7 +210,7 @@ defmodule Pleroma.Web.OStatus.OStatusControllerTest do
       assert response(conn, 404)
     end
 
-    test "404s a non-existing notice", %{conn: conn} do
+    test "404s a nonexistent notice", %{conn: conn} do
       url = "/notice/123"
 
       conn =

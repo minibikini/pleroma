@@ -344,7 +344,7 @@ defmodule Pleroma.Web.PleromaAPI.EmojiFileControllerTest do
              }
     end
 
-    test "remove non existing shortcode in pack.json", %{admin_conn: admin_conn} do
+    test "remove nonexistent shortcode in pack.json", %{admin_conn: admin_conn} do
       assert admin_conn
              |> delete("/api/pleroma/emoji/packs/files?name=test_pack&shortcode=blank3")
              |> json_response_and_validate_schema(:bad_request) == %{
@@ -352,7 +352,7 @@ defmodule Pleroma.Web.PleromaAPI.EmojiFileControllerTest do
              }
     end
 
-    test "update non existing emoji", %{admin_conn: admin_conn} do
+    test "update nonexistent emoji", %{admin_conn: admin_conn} do
       assert admin_conn
              |> put_req_header("content-type", "multipart/form-data")
              |> patch("/api/pleroma/emoji/packs/files?name=test_pack", %{

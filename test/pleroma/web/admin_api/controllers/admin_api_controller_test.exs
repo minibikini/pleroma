@@ -776,8 +776,8 @@ defmodule Pleroma.Web.AdminAPI.AdminAPIControllerTest do
              |> json_response(400) == %{"errors" => %{"actor_type" => "is invalid"}}
     end
 
-    test "update non existing user", %{conn: conn} do
-      assert patch(conn, "/api/pleroma/admin/users/non-existing/credentials", %{
+    test "update nonexistent user", %{conn: conn} do
+      assert patch(conn, "/api/pleroma/admin/users/nonexistent/credentials", %{
                "password" => "new_password"
              })
              |> json_response(404) == %{"error" => "Not found"}

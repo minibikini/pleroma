@@ -815,13 +815,13 @@ defmodule Pleroma.UserTest do
 
     @tag capture_log: true
     test "returns nil if no user could be fetched" do
-      {:error, fetched_user} = User.get_or_fetch_by_nickname("nonexistant@social.heldscal.la")
-      assert fetched_user == "not found nonexistant@social.heldscal.la"
+      {:error, fetched_user} = User.get_or_fetch_by_nickname("nonexistent@social.heldscal.la")
+      assert fetched_user == "not found nonexistent@social.heldscal.la"
     end
 
-    test "returns nil for nonexistant local user" do
-      {:error, fetched_user} = User.get_or_fetch_by_nickname("nonexistant")
-      assert fetched_user == "not found nonexistant"
+    test "returns nil for nonexistent local user" do
+      {:error, fetched_user} = User.get_or_fetch_by_nickname("nonexistent")
+      assert fetched_user == "not found nonexistent"
     end
 
     test "updates an existing user, if stale" do
