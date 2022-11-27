@@ -101,7 +101,7 @@ Not only does this make it much easier to deploy changes you make, as you can co
 
 * Add a new system user for the Pleroma service and set up default directories:
 
-Remove `,wheel` if you do not want this user to be able to use `sudo`, however note that being able to `sudo` as the `pleroma` user will make finishing the installation and common maintenence tasks somewhat easier:
+Remove `,wheel` if you do not want this user to be able to use `sudo`, however note that being able to `sudo` as the `pleroma` user will make finishing the installation and common maintenance tasks somewhat easier:
 
 ```shell
  # useradd -m -G users,wheel -s /bin/bash pleroma
