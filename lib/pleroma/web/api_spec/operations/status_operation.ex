@@ -489,7 +489,7 @@ defmodule Pleroma.Web.ApiSpec.StatusOperation do
           allOf: [BooleanLike],
           nullable: true,
           description:
-            "If set to `true` the post won't be actually posted, but the status entitiy would still be rendered back. This could be useful for previewing rich text/custom emoji, for example"
+            "If set to `true` the post won't be actually posted, but the status entity would still be rendered back. This could be useful for previewing rich text/custom emoji, for example"
         },
         content_type: %Schema{
           type: :string,
