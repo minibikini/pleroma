@@ -75,7 +75,7 @@ defmodule Pleroma.Captcha do
 
   defp validate_expiration(created_at) do
     # If the time found is less than (current_time-seconds_valid) then the time has already passed
-    # Later we check that the time found is more than the presumed invalidatation time, that means
+    # Later we check that the time found is more than the presumed invalidation time, that means
     # that the data is still valid and the captcha can be checked
 
     valid_if_after = DateTime.subtract!(DateTime.now_utc(), seconds_valid())
