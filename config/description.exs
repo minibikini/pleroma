@@ -1350,7 +1350,7 @@ config :pleroma, :config_description, [
             label: "Subject line behavior",
             type: :string,
             description: "Allows changing the default behaviour of subject lines in replies.
-          `email`: copy and preprend re:, as in email,
+          `email`: copy and prepend re:, as in email,
           `masto`: copy verbatim, as in Mastodon,
           `noop`: don't copy the subject.",
             suggestions: ["email", "masto", "noop"]
