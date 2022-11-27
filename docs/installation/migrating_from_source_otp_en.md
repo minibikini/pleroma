@@ -4,7 +4,7 @@
 OTP releases are as close as you can get to binary releases with Erlang/Elixir. The release is self-contained, and provides everything needed to boot it, it is easily administered via the provided shell script to open up a remote console, start/stop/restart the release, start in the background, send remote commands, and more.
 
 ## Pre-requisites
-You will be running commands as root. If you aren't root already, please elevate your priviledges by executing `sudo su`/`su`.
+You will be running commands as root. If you aren't root already, please elevate your privileges by executing `sudo su`/`su`.
 
 The system needs to have `curl` and `unzip` installed for downloading and unpacking release builds.
 
