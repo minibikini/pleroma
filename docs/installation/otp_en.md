@@ -6,7 +6,7 @@
 
 You will be running commands as root. If you aren't root already, please elevate your priviledges by executing `sudo su`/`su`.
 
-While in theory OTP releases are possbile to install on any compatible machine, for the sake of simplicity this guide focuses only on Debian/Ubuntu and Alpine.
+While in theory OTP releases are possible to install on any compatible machine, for the sake of simplicity this guide focuses only on Debian/Ubuntu and Alpine.
 
 ### Detecting flavour
 
