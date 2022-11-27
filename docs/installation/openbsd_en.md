@@ -70,7 +70,7 @@ rcctl start postgresql
 To check that it started properly and didn't fail right after starting, you can run `ps aux | grep postgres`, there should be multiple lines of output.
 
 #### httpd
-httpd will have three fuctions:
+httpd will have three functions:
 
   * redirect requests trying to reach the instance over http to the https URL
   * serve a robots.txt file
