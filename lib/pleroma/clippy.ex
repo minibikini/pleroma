@@ -29,7 +29,7 @@ defmodule Pleroma.Clippy do
       "Lists of Pleroma instances:\n\n- http://distsn.org/pleroma-instances.html\n- https://fediverse.network/pleroma\n- https://the-federation.info/pleroma",
       "Pleroma uses the LitePub protocol - https://litepub.social",
       "To receive more federated posts, subscribe to relays!\n
-- How-to: https://git.pleroma.social/pleroma/pleroma/wikis/Admin%20tasks#relay-managment
+- How-to: https://git.pleroma.social/pleroma/pleroma/wikis/Admin%20tasks#relay-management
 - Relays: https://fediverse.network/activityrelay"
     ]
   end
