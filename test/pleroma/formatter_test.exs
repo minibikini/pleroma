@@ -302,8 +302,8 @@ defmodule Pleroma.FormatterTest do
   end
 
   test "it escapes HTML in plain text" do
-    text = "hello & world google.com/?a=b&c=d \n http://test.com/?a=b&c=d 1"
-    expected = "hello &amp; world google.com/?a=b&c=d \n http://test.com/?a=b&c=d 1"
+    text = "hello & world google.com/?a=b&c=d \n http://example.com/?a=b&c=d 1"
+    expected = "hello &amp; world google.com/?a=b&c=d \n http://example.com/?a=b&c=d 1"
 
     assert Formatter.html_escape(text, "text/plain") == expected
   end

@@ -263,7 +263,7 @@ defmodule Pleroma.Web.TwitterAPI.UtilControllerTest do
         |> assign(:token, nil)
         |> post(
           "/api/pleroma/change_email?#{
-            URI.encode_query(%{password: "hi", email: "test@test.com"})
+            URI.encode_query(%{password: "hi", email: "test@example.com"})
           }"
         )
 
@@ -277,7 +277,7 @@ defmodule Pleroma.Web.TwitterAPI.UtilControllerTest do
         post(
           conn,
           "/api/pleroma/change_email?#{
-            URI.encode_query(%{password: "hi", email: "test@test.com"})
+            URI.encode_query(%{password: "hi", email: "test@example.com"})
           }"
         )
 
