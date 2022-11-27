@@ -543,7 +543,7 @@ switched to a new configuration mechanism, however it was not officially removed
 - Rate limiter crashes when there is no explicitly specified ip in the config
 - 500 errors when no `Accept` header is present if Static-FE is enabled
 - Instance panel not being updated immediately due to wrong `Cache-Control` headers
-- Statuses posted with BBCode/Markdown having unncessary newlines in Pleroma-FE
+- Statuses posted with BBCode/Markdown having unnecessary newlines in Pleroma-FE
 - OTP: Fix some settings not being migrated to in-database config properly
 - No `Cache-Control` headers on attachment/media proxy requests
 - Character limit enforcement being off by 1
