@@ -22,13 +22,13 @@ defmodule Pleroma.User.BackupTest do
     clear_config([Pleroma.Emails.Mailer, :enabled], true)
   end
 
-  test "it requries enabled email" do
+  test "it requires enabled email" do
     clear_config([Pleroma.Emails.Mailer, :enabled], false)
     user = insert(:user)
     assert {:error, "Backups require enabled email"} == Backup.create(user)
   end
 
-  test "it requries user's email" do
+  test "it requires user's email" do
     user = insert(:user, %{email: nil})
     assert {:error, "Email is required"} == Backup.create(user)
   end
