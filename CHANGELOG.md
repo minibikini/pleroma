@@ -201,7 +201,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Introduced optional dependencies on `ffmpeg`, `ImageMagick`, `exiftool` software packages. Please refer to `docs/installation/optional/media_graphics_packages.md`.
 - <details>
   <summary>API Changes</summary>
-- API: Empty parameter values for integer parameters are now ignored in non-strict validaton mode.
+- API: Empty parameter values for integer parameters are now ignored in non-strict validation mode.
 </details>
 
 ### Removed
