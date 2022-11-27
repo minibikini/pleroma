@@ -186,7 +186,7 @@ defmodule Pleroma.Web.ActivityPub.Builder do
     end
   end
 
-  # Retricted to user updates for now, always public
+  # Restricted to user updates for now, always public
   @spec update(User.t(), Object.t()) :: {:ok, map(), keyword()}
   def update(actor, object) do
     to = [Pleroma.Constants.as_public(), actor.follower_address]
