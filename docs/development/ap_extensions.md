@@ -20,7 +20,7 @@ Content-Type: multipart/form-data
 
 Parameters:
 - (required) `file`: The file being uploaded
-- (optionnal) `description`: A plain-text description of the media, for accessibility purposes.
+- (optional) `description`: A plain-text description of the media, for accessibility purposes.
 
 Response: HTTP 201 Created with the object into the body, no `Location` header provided as it doesn't have an `id`
 
