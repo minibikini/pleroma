@@ -402,7 +402,7 @@ defmodule HttpRequestMock do
     {:ok,
      %Tesla.Env{
        status: 200,
-       body: File.read!("test/fixtures/tesla_mock/admin@mastdon.example.org.json"),
+       body: File.read!("test/fixtures/tesla_mock/admin@mastodon.example.org.json"),
        headers: activitypub_object_headers()
      }}
   end
@@ -413,7 +413,7 @@ defmodule HttpRequestMock do
     {:ok,
      %Tesla.Env{
        status: 200,
-       body: File.read!("test/fixtures/tesla_mock/relay@mastdon.example.org.json"),
+       body: File.read!("test/fixtures/tesla_mock/relay@mastodon.example.org.json"),
        headers: activitypub_object_headers()
      }}
   end
