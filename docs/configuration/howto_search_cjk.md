@@ -7,7 +7,7 @@ Pleroma's full text search feature is powered by PostgreSQL's native [text searc
 
 In most cases, you would need an extension installed to support parsing CJK text. Here are a few extension you may choose from, or you are more than welcome to share additional ones you found working for you with the rest of Pleroma community.
 
- * [a generic n-gram parser](https://github.com/huangjimmy/pg_cjk_parser) supports Simplifed/Traditional Chinese, Japanese, and Korean
+ * [a generic n-gram parser](https://github.com/huangjimmy/pg_cjk_parser) supports Simplified/Traditional Chinese, Japanese, and Korean
  * [a Korean parser](https://github.com/i0seph/textsearch_ko) based on mecab
  * [a Japanese parser](https://www.amris.co.jp/tsja/index.html) based on mecab
  * [zhparser](https://github.com/amutu/zhparser/) is a PostgreSQL extension base on the Simple Chinese Word Segmentation(SCWS)
