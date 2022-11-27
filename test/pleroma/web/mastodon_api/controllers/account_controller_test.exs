@@ -1385,7 +1385,7 @@ defmodule Pleroma.Web.MastodonAPI.AccountControllerTest do
         |> Plug.Conn.put_req_header("authorization", "Bearer " <> token)
         |> put_req_header("content-type", "multipart/form-data")
         |> post("/api/v1/accounts", %{
-          nickname: "nickanme",
+          nickname: "nickname",
           agreement: true,
           email: "email@example.com",
           fullname: "Lain",
