@@ -398,7 +398,7 @@ defmodule Pleroma.ConfigDBTest do
              ]
     end
 
-    test "trandformed keyword" do
+    test "transformed keyword" do
       assert ConfigDB.to_elixir_types(a: 1, b: 2, c: "string") == [a: 1, b: 2, c: "string"]
     end
 
