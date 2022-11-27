@@ -3050,7 +3050,7 @@ config :pleroma, :config_description, [
               key: :max_waiting,
               type: :integer,
               description:
-                "Maximum number of requests waiting for other requests to finish. After this number is reached, the pool will start returning errrors when a new request is made",
+                "Maximum number of requests waiting for other requests to finish. After this number is reached, the pool will start returning errors when a new request is made",
               suggestions: [10]
             },
             %{
