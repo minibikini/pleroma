@@ -197,7 +197,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Renamed `:timeout` in `pools` namespace to `:recv_timeout`, old name is deprecated.
 - The `discoverable` field in the `User` struct will now add a NOINDEX metatag to profile pages when false.
 - Users with the `is_discoverable` field set to false will not show up in searches ([bug](https://git.pleroma.social/pleroma/pleroma/-/issues/2301)).
-- Minimum lifetime for ephmeral activities changed to 10 minutes and made configurable (`:min_lifetime` option).
+- Minimum lifetime for ephemeral activities changed to 10 minutes and made configurable (`:min_lifetime` option).
 - Introduced optional dependencies on `ffmpeg`, `ImageMagick`, `exiftool` software packages. Please refer to `docs/installation/optional/media_graphics_packages.md`.
 - <details>
   <summary>API Changes</summary>
