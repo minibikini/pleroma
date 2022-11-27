@@ -25,10 +25,10 @@ defmodule Pleroma.Emails.UserEmailTest do
     config = Pleroma.Config.get(:instance)
     user = insert(:user)
     token = %Pleroma.UserInviteToken{token: "test-token"}
-    email = UserEmail.user_invitation_email(user, token, "test@example.com", "Jonh")
+    email = UserEmail.user_invitation_email(user, token, "test@example.com", "John")
     assert email.from == {config[:name], config[:notify_email]}
     assert email.subject == "Invitation to Pleroma"
-    assert email.to == [{"Jonh", "test@example.com"}]
+    assert email.to == [{"John", "test@example.com"}]
 
     assert email.html_body =~
              Router.Helpers.redirect_url(Endpoint, :registration_page, token.token)
