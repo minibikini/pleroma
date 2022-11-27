@@ -241,7 +241,7 @@ defmodule Pleroma.Web.AdminAPI.UserControllerTest do
           "users" => [
             %{
               "nickname" => user.nickname,
-              "email" => "someuser@plerama.social",
+              "email" => "someuser@pleroma.social",
               "password" => "test"
             }
           ]
@@ -251,7 +251,7 @@ defmodule Pleroma.Web.AdminAPI.UserControllerTest do
                %{
                  "code" => 409,
                  "data" => %{
-                   "email" => "someuser@plerama.social",
+                   "email" => "someuser@pleroma.social",
                    "nickname" => user.nickname
                  },
                  "error" => "nickname has already been taken",

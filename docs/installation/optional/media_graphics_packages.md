@@ -14,7 +14,7 @@ Note: the packages are not required with the current default settings of Pleroma
 `ImageMagick` is a set of tools to create, edit, compose, or convert bitmap images.
 
 It is required for the following Pleroma features:
-  * `Pleroma.Upload.Filters.Mogrify`, `Pleroma.Upload.Filters.Mogrifun` upload filters (related config: `Plaroma.Upload/filters` in `config/config.exs`)
+  * `Pleroma.Upload.Filters.Mogrify`, `Pleroma.Upload.Filters.Mogrifun` upload filters (related config: `Pleroma.Upload/filters` in `config/config.exs`)
   * Media preview proxy for still images (related config: `media_preview_proxy/enabled` in `config/config.exs`)
   
 ## `ffmpeg`
@@ -29,4 +29,4 @@ It is required for the following Pleroma features:
 `exiftool` is media files metadata reader/writer.
 
 It is required for the following Pleroma features:
-  * `Pleroma.Upload.Filters.Exiftool` upload filter (related config: `Plaroma.Upload/filters` in `config/config.exs`)
+  * `Pleroma.Upload.Filters.Exiftool` upload filter (related config: `Pleroma.Upload/filters` in `config/config.exs`)
