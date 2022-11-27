@@ -224,7 +224,7 @@ If you are using any additional subdomains, such as for a media proxy, you can r
 
 Replace all instances of `example.tld` with your instance's public URL. If for whatever reason you made changes to the port that your pleroma app runs on, be sure that is reflected in your configuration.
 
-Pay special attention to the line that begins with `ssl_ecdh_curve`. It is stongly advised to comment that line out so that OpenSSL will use its full capabilities, and it is also possible you are running OpenSSL 1.0.2 necessitating that you do this.
+Pay special attention to the line that begins with `ssl_ecdh_curve`. It is strongly advised to comment that line out so that OpenSSL will use its full capabilities, and it is also possible you are running OpenSSL 1.0.2 necessitating that you do this.
 
 * Enable and start nginx:
 
